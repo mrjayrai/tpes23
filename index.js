@@ -50,7 +50,9 @@ app.use(express.static('public'))
 app.get('/',(req,res)=>{
     res.sendFile('/index.html')
 })
-
+app.post('/ded',(req,res)=>{
+    res.send("hi");
+}
 app.post('/sendemail',(req,res)=>{
     upload(req,res,function(err){
         if(err){
