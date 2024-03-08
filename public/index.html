@@ -1,1 +1,1885 @@
-1
+
+<html>
+    <head>
+        <title>
+            Contact Form
+        </title>
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- ========================================================================= -->
+        <title>The Pearl Engineering Solutions</title>
+        <link rel="stylesheet" href="Index.css" />
+        <link rel="stylesheet" href="indexk.css" />
+        <link rel="stylesheet" href="indexpr.css" />
+        <link rel="stylesheet" href="indexpf.css">
+        <link rel="stylesheet" href="indexk2.css">
+        <link rel="stylesheet" href="indexjy.css">
+        <link rel = "icon" href ="LogoFinal.png" 
+            type = "image/x-icon">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <!-- <link rel="stylesheet" href="stylej.css"> -->
+        <script src="indexpf.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        </style>
+        <!-- ================================================================================================== -->
+        <style>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  --color1: #fff;
+  --color2: #181818;
+  max-width: fit-content;
+  overflow-y: auto;
+  overflow: scroll; 
+
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+/* .navhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #020122;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+} */
+
+
+#navhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: #2596be;
+  /* background-color: transparent;  */
+  transition: background-color 0.5s ease-in-out;
+  padding: 0px 10px;
+  /* z-index: 1; */
+}
+.BgColour {
+  color: black;
+  transition: all 3s;
+  /* background-color: white; */
+  /* background-color: #ffbc13; */
+  background-color: #2596be;
+  border-bottom: 1px solid lightgray;
+}
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 30px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 17px;
+/*  font-weight: 20%;*/
+}
+.menu li a:hover{
+  color: #ff521b;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  /* background-color: var(--color1); */
+  background-color: #ff521b;
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+
+
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: white;
+  /* color: #ff521b; */
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+@media (max-width: 850px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    /* background-color: #ff521b; */
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.logo img {
+  height:100px;
+  width: 250px;
+  float: left;
+  padding: 0 10px;
+  border-radius: 10px ;
+}
+/*
+.list a {
+  margin-left: 10px;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 35px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.list :hover {
+  color: #ff521b;
+} */
+
+/*
+.list a {
+  margin-left: 10px;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 35px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.list :hover {
+  color: #ff521b;
+} */
+
+.Home {
+  overflow-x: hidden;
+  position: relative;
+  /* height: 531px; */
+  width: 100%;
+  /* background-color: black; */
+}
+.Home img{
+  background-size: 100% 100%; 
+  height: 489px; 
+   height: 100vh;
+  width: 100%; 
+}
+
+ .homeim {
+  /* background-image: url("DSC00245.JPG"); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  height: 489px; 
+   height: 100vh;
+  width: 100%; 
+    /* opacity: 80%;  */
+  display: flex;
+  /* filter: brightness(40%); */
+   justify-content: center;
+  align-items: center; 
+} 
+
+ .homeim img{
+  filter: brightness(40%);
+} 
+
+/* .intro{
+    justify-content: center;
+    text-align: center;
+    color: #00a6aa; */
+    /* padding: 230px; */
+    /* margin-top: -450px; */
+    /* font-size:30px;
+    font-weight:700; */
+    /* overflow: hidden; */
+/* } */
+
+.intro{
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  color: #fff;
+}
+
+.intro .tagline1{
+  justify-content: left;
+  text-align: left;
+  /* color: rgb(63, 12, 12); */
+  color: white;
+  /* color: #ff521b; */
+  font-size: 70px;
+  font-weight: 700;
+  filter: brightness(120%);
+}
+.Home .tagline1 {
+  justify-content: left;
+  text-align: left;
+  color: #f66c16; 
+  margin-left: 50px;
+  padding-top: 50px;
+  font-size: 4vw;
+  font-weight: 400;
+  filter: brightness(120%);
+  font-family: inherit; 
+   font-family:sans-serif;
+}
+.intro .tagline2 {
+  justify-content: left;
+  text-align: left;
+  filter: brightness(120%);
+  height: 80px;
+  font-size:1vw;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  overflow: hidden;
+  white-space:nowrap;
+  animation-iteration-count: infinite;
+  font-family: "Secular One", sans-serif;
+  color:#ffbc13;
+  text-wrap : pretty
+}
+
+@keyframes typing {
+  0% { width:0% }
+  100% { width:100% }
+}
+@keyframes blink {
+  0%,100% {
+    border-right:2px solid transparent;
+  }
+  50% {
+    border-right:2px solid transparent;
+  }
+}
+
+.Secondpg {
+  /* height: 79px; */
+  height: 18vh;
+  width: 100%;
+  background-color: #ffbc13;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: -5%;
+  margin-bottom: -5%;
+}
+
+#ing {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  /* font-family: "Montserrat",sans-serif; */
+  font-family: "Secular One", sans-serif;
+  word-wrap: none;
+  line-height: 1.5;
+  margin: 0 0 12px; 
+  margin-top: 3vw;
+  margin-bottom: 5px;
+  margin-left: 5%;
+}
+
+.Vision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65px;
+}
+
+.line1 {
+  height: 4px;
+  width: 120px;
+  position: absolute;
+  vertical-align: baseline;
+  font-family: inherit;
+  background-color: #ffbc13;
+  margin-top: 55px;
+}
+
+.visioncont {
+  /* max-width: 90%; */
+  /* max-width: 10vb; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  padding-top: 35px;
+  margin-bottom: 80px;
+}
+
+.visbox {
+  height: 200px;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  overflow-x:hidden;
+
+
+  /* margin: 20px; */
+}
+
+.visbox img {
+  height: 60px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.ic2 {
+  height: 60px;
+  margin-top: 50px;
+}
+
+#ic3 {
+  height: 60px;
+  float: right;
+  padding-top: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.visvis {
+  float: right;
+  padding: 0 20px;
+  /* font-family: 'Secular One', sans-serif; */
+  /* text-align: justify; */
+  /* text-justify: inter-word;
+  word-wrap: break-word; */
+}
+
+.visvis pre {
+  display: inline;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: "Secular One", sans-serif;
+}
+
+.visvis :hover {
+  color: #ffbc13;
+}
+#emp {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2596be;
+  line-height: 1.5;
+  text-align: left;
+  padding-top: 12px;
+   vertical-align: baseline; 
+   display: inline-block; 
+  word-wrap:justify;
+  content: justify;
+
+}
+
+#emp1 {
+  /* display: inline-block; */
+  max-width: 280px;
+  font-size: 14px;
+  color: #666;
+  padding-top: 12px;
+  line-height: 1.5;
+  text-align: left;
+  /* justify-content: center; */
+  word-wrap: break-word;
+  margin-right: -122px;
+}
+
+/* scrool */
+.oureve{
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  font-weight: 500;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding-bottom: 8px;
+}
+
+.line4 {
+  height: 4px;
+  width: 120px;
+  /* background-color: rgb(0, 0, 0); */
+  /* position: absolute; */
+  vertical-align: baseline;
+  font-family: inherit;
+  background-color: #ffbc13;
+  margin-left: 45%;
+  margin-bottom: 8px;
+  margin-top: -12px;
+}
+/* Our Team section css */
+
+.teamss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+  background-color: #161623;
+  color: white;
+  padding-top: 40px;
+  /* margin-top: -20px; */
+}
+
+.teams {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-wrap: wrap;
+  background-color: white;
+  /* background-color: white; */
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.teamsp {
+  position: relative;
+  margin-top: -20px;
+}
+.teamsp1 {
+  position: relative;
+  margin-top: -20px;
+}
+.teamsp::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(#f00,#f0f); */
+  /* background: linear-gradient(#2196f3,#e91e63); */
+  /* background: linear-gradient(#ffbc13,#e91e63); */
+  /* clip-path: circle(25% at right 60%); */
+  /* clip-path: circle(20% at 10% 10%); */
+  background: linear-gradient(#f00, #f0f);
+  clip-path: circle(5% at right 50%);
+}
+
+.teamsp::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(#2196f3,#e91e63); */
+/*  background: linear-gradient(#ffbc13, #e91e63);*/
+  /* clip-path: circle(20% at 10% 10%); */
+  /* clip-path: circle(25% at left 60%); */
+  /* background: linear-gradient(#2196f3,#e91e63); */
+/*  clip-path: circle(5% at 4% 5%);*/
+  /* clip-path: circle(5% at 40% 5%); */
+}
+
+.teamsp1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(#f00,#f0f); */
+  /* background: linear-gradient(#2196f3,#e91e63); */
+  /* background: linear-gradient(#ffbc13,#e91e63); */
+  /* clip-path: circle(25% at right 60%); */
+  /* clip-path: circle(20% at 10% 10%); */
+  background: white;
+  clip-path: circle(5% at right 50%);
+}
+.teamsp1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(#2196f3,#e91e63); */
+  background: white;
+  /* clip-path: circle(20% at 10% 10%); */
+  /* clip-path: circle(25% at left 60%); */
+  /* background: linear-gradient(#2196f3,#e91e63); */
+/*  clip-path: circle(3% at 4% 5%);*/
+  /* clip-path: circle(5% at 40% 5%); */
+}
+.container {
+  position: relative;
+  /* z-index: 1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  margin-left: 0px;
+  margin-right: 20%;
+
+  /* margin-top: -200px; */
+  cursor: pointer;
+}
+.container .card {
+  position: relative;
+  width: 230px;
+  height: 350px;
+  background: #2596be;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 15px 35px rgba(212, 181, 181, 0.1); */
+  /* margin: 40px; */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+  margin-bottom: -10%;
+  /* flex: 33.33%;
+  max-width: 33.33%;
+  padding: 15px; */
+  backdrop-filter: blur(10px) saturate(180%);
+  float: center;
+  padding: 0 10px;
+
+}
+
+@media screen and (max-width:600px){
+  .container.card{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.container .card .content {
+  position: absolute;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1.7;
+  transition: 0.5s;
+  background-color: #76b5c5;
+  padding: 10%;
+}
+
+/*.container .card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}*/
+
+/*.container .card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translate(40px);
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+*/
+/*.container .card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+*/
+/*.container .card .sci li a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.conatiner .card:hover .content {
+  opacity: 1;
+}*/
+
+.container .card .content .contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-size: 15px;
+  text-align: 18px;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.container .card .content .contentBx :hover {
+  color: #ffbc13;
+}
+
+.container .card .content .contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+.container .card .content .imgBx {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 10px solid rgba(0, 0, 0, 0.25); */
+}
+
+.container .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ceve {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0e922;
+  /* width: 100%; */
+}
+.carousel-item img {
+  width: 200%;
+  max-width: none;
+}
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+  color: #ff521b;
+  /* color: yellow; */
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+  font-weight: 500;
+  /* box-shadow: #f0e922; */
+	transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+	backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+	/* background: #009578; */
+  background: transparent;
+}
+
+.image__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 80%;
+  /* backdrop-filter: blur(3px) saturate(120%); */
+  backdrop-filter: blur(3px) saturate(100%);
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
+.image__title {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image__description {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+  word-wrap: break-word;
+}
+
+/*====================================*/
+.content1 {
+  padding-right: 10vw; /* Adjust as needed to accommodate the scrolling section */
+}
+.scrolling-section {
+  position: absolute;
+  top: -2%;
+  right: 0;
+  width: 20%; /* Width of the scrolling section */
+  height: 110%;
+  background-color:#76b5c5;
+/*  overflow: hidden;*/
+  padding: 20px;
+  border: 10px solid #ffbc13;
+  behavior: scroll;
+  
+}
+ .square-box {
+        width: 200px; 
+        height: 200px; 
+ }
+
+.scrolling-content {
+  animation: scroll 50s infinite ; /* Adjust animation duration as needed */
+  top: 0%;
+  right: 10%;
+  width: 100%; /* Width of the scrolling section */
+  height: 100%;
+  margin-top: 0%;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 1200;
+  font-size: 18px;
+  text-align: 18px;
+  margin: 10px 0 50px;
+  line-height: 1.1em;
+  scroll-behavior: smooth;
+}
+
+
+
+
+@keyframes scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+/*==================================*/
+F
+
+/*=============================*/
+/*contact form */
+
+
+.form{
+  width: 100%px;
+  padding: 30px;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  background-color: #2596be;
+  justify-content: center;
+  display: flex;
+}
+h4{
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #abdbe3;
+}
+input{
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+textarea{
+  width: 100%;
+  padding: 10px;
+}
+#submit{
+  border: none;
+  background-color: #ffbc13;
+  color: white;
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+#submit:hover{
+  background-color: #333333;
+}
+/*====================================*/
+
+
+.styledTextbox {
+  width: 150%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.styledTextbox:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+.styledTextbox::placeholder {
+  color: #999;
+}
+
+
+/*===================================*/
+
+/*counter visitor*/
+
+.hero{
+    width: 100%;
+    height: 50vh;
+/*    background-image: url(Blue.png);*/
+    background-color: #abdbe3;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+/*.title{
+    width: 60%;
+    display: inline-block;
+    margin: 150px auto 0;
+    color: #fff;
+    text-align: center;
+}
+.title h1{
+    margin-bottom: 30px;
+}
+.title p{
+    font-size: 13px;
+    line-height: 22px;
+}*/
+.row1{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.col1{
+    flex-basis: 20%;
+    text-align: center;
+    color: #ffbc13;
+    
+}
+
+@media screen and (max-width:600px){
+  .col1{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.counter-box{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px -4px #66676c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1.7;
+    transition: 0.5s;
+}
+/*h2,span{
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 50px;
+    color: #000;
+}*/
+.counter-box .fa{
+    font-size: 40px;
+    color: #009688;
+    display: block;
+}
+
+.counter-box h4{
+    color: #009688;
+}
+/*h2,span{
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 50px;
+    color: #000;
+}*/
+
+
+.jay{
+    position:relative;
+    height:550px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    place-items:center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background-color: rgb(0, 0, 0);
+    padding-left: 12%;
+    padding-right: 12%;
+}
+.slider-track{
+    
+    display:flex;
+    /* width:calc(500*6); */
+    /* background-color: black; */
+    /* height: 300px; */
+    animation:slidescroll 50s linear infinite ;
+}
+
+.slider-track:hover{
+    animation-play-state:paused;
+}
+.slide{
+    width:350px;
+    height:400px;
+    display:flex;
+    align-items:center;
+    padding:30px;
+    overflow:hidden;
+    perspective:100px;
+    cursor:pointer;
+ 
+}
+.slide img{
+    width: 300px;
+    height: 350px; 
+    object-fit:cover;
+    transition:transform 1s;
+    border-radius: 5px;
+}
+.slide img:hover{
+    transform:translateZ(20px);
+    filter:brightness(90%)
+}
+.cover{
+    display:inline;
+
+}
+@keyframes slidescroll{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(calc(-250px*19))
+    }
+}
+.section-work {
+  background-color: rgb(49, 46, 46);
+  /* background-color: #161623; */
+  width: 100%;
+  height: 531px;
+  padding-top: 20px;
+}
+.text {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  line-height: 2;
+  margin: 0 0 12px;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
+
+.container1{
+  background-color: rgb(255, 255, 255);
+  padding:10px 9%;
+  padding-bottom: 50px;
+}
+.container1 .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color:black;
+    text-shadow: 0 5px 10px rgb(0,0,0,.2);
+    font-size: 25px;
+
+}
+.line3{
+  background-color:#ffbc13;
+  height: 3.5px;
+  width:100px;
+  padding: 0 8px;
+  margin-left: 44.5%;
+  margin-bottom: 20px;
+  margin-top: -12px;
+}
+.container1 .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+   gap:10px 10px;
+      
+  
+} 
+.container1 .box-container .box{
+  box-shadow:0px 5px 10px rgba(0,0,0,.2);
+   border-radius: 0px;
+  background: #dddada;
+  text-align: center;
+  justify-content: center;
+  padding: 30px 20px;
+} 
+.container1 .box-container .box img{
+  height: 50px;
+  width:100px
+}
+.container1 .box-container .box h3{
+  color:#444;
+  font-size: 15px;
+  padding:10px 0;
+}
+.container1 .box-container .box:hover{
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  transform: scale(1.03);
+}
+
+.facultys{
+  /* display: inline; */
+  display: flex;
+  /* display: flex; */
+  padding: 40px 0;
+  
+  /* background: #f1f1f1; */
+  background-color: #020122;
+  /* color: #434343; */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;     
+
+
+}
+.facultys .ffc{
+  text-shadow: 0 5px 10px rgb(0,0,0,.2);
+}
+.inner{
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  padding:0 20px;
+}
+.border{
+  width:160px;
+  height: 5px;
+  /* background: #6ab04c; */
+  background: #ffbc13;
+  margin:8px auto;
+} 
+.row{
+  /* display: inline-flex; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #020122;
+
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  /* gap: 10px; */
+  box-sizing: border-box;
+  padding: 20px;
+ 
+}
+.faculty{
+  /* background: #ccc8bc; */
+  /* background: #ffffff; */
+  background: #ffbc13;
+  padding: 25px;
+  height: 370px;
+  width: 256px;
+}
+.faculty img{
+width:256px;
+height:250px;
+margin-top: -25px;
+margin-left:-50px ;
+margin-right: -50px;
+border-radius: 0%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+
+}
+
+.faculty  h3{
+  margin-top: -15px;
+}
+
+@media screen and (max-width:960px){
+
+  .col{
+      flex:100%;
+      max-width: 80%;
+  }
+}
+@media screen and (max-width:600px){
+
+  .col{
+      flex:100%;
+      max-width: 80%;
+  }
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    height:max-content;
+    background:black ;
+}
+.main-content2{
+    display: flex;
+}
+
+.main-content2 .box2{
+    flex-basis: 50%;
+    padding: 10px 20px;
+  }
+  .box2 h3{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+   
+  }
+  .line5{
+    background-color:#ffbc13;
+     height: 3.5px;
+     width:100px;
+ 
+ }
+
+  .box2 .content2{
+    margin: 20px 0 0 0;
+    position: relative;
+  }
+
+.box2 .content2 .img6{
+    display: flex;
+    height: 40px;
+    width: 40px;
+
+}
+.content2 p{
+    color:#ffffff
+  }
+  .left .content2 p{
+    text-align: justify;
+    padding-top: 25px;
+  }
+  .center .content2 .place{
+    padding-top: 25px;
+  }
+  .center .content2 .text {
+    font-size: 1.0625rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding-left: 10px;
+    text-align: left;
+    
+  }
+  .center .content2 .phone{
+    margin: 10px 0;
+  }
+
+  .bottom2 center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+  }
+  .bottom2 center span{
+    color: #656565;
+  }
+  .bottom2 center a{
+    color: #f12020;
+    text-decoration: none;
+  }
+  .bottom2 center a:hover{
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+    .footer{
+      position: relative;
+      bottom: 0px;
+    }
+    .main-content2{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .main-content2 .box2{
+      margin: 5px 0;
+    }
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* section {
+    height:75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+} */
+
+
+  
+  .to-top {
+    background: #ffbc13;
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    color:#1f1f1f;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+  
+  .to-top.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity:1;
+  }
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+        </style>
+    </head>
+    <body>
+        <nav id="navhead" style="width: 100vw;">
+            <ul id="nav-bar" class="nav-bar" style="width: 100%;">
+                <!-- <li class='logo'><a href='#'><img src='./images/logo.png'/></a></li> -->
+                <div class="logo">
+                    <img src="LogoFinal.png" alt="Face-IT" />
+                </div>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="#ing">Domains Available</a></li>
+                    <li><a href="#Pearl">Pearl Engineering</a></li>
+                    <li><a href="#Vision">Available Services</a></li> 
+                    <li><a href="#contact form">Contact</a></li>
+                    <li><a href="#about">About Us</a></li>
+    
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+            
+           
+        </nav>
+        <br><br><br><br><br><br>
+        <!-- <section>
+          <div style="border: 3px solid #009688;">
+          <h2 >The Pearl Engineering Solutions</h2>
+          <p>Pearl Engineering Solutions is a leading provider of engineering services renowned for its commitment to
+             excellence and integrity. Specializing in project development, technical paper writing, and thesis writing,
+              Pearl Engineering Solutions ensures that all deliverables are of the highest quality while maintaining a
+               plagiarism level below 10%, as verified by Turnitin, a widely recognized plagiarism detection tool</p>
+          </div>
+        </section> -->
+
+        <section class="teamsp">
+          <div class="teams">
+              <div class="Secondpg">
+                  <p id="ing">Domains Available</p>
+              </div>
+              <div class="container">
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="ImageProcessing.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Image processing</h3>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="SignalProcessing.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Signal Processing</h3>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="DigitalCommunication.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Digital Communication </h3>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="CRYPTOGRAPHY AND STEGANOGRAPHY.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Cryptography and Steganography</h3>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <!-- <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="AI&ML.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Artificial Intelligence and Machine Learning</h3>
+                          </div>
+                      </div>
+                      
+                  </div> -->
+  
+                  <!-- ================================= -->
+  
+                  <!-- ======================================= -->
+                  
+              </div>
+              <div class="container">
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="NLP.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Natural Language Processing</h3>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="WIRELESS SENSOR NETWORK.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Wireless Sensor Network</h3>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="AUDIO & VIDEO PROCESSING.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Audio & Video Processing</h3>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="Biomedical.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Biomedical </h3>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  <!-- <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="DATA MINING & DATA SCIENCE.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Data Mining & Data Science</h3>
+                          </div>
+                      </div>
+                     
+                  </div> -->
+                  
+              </div>
+  
+              <div class="container">
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="AI&ML.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>AI & ML</h3>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="WIRELESS SENSOR NETWORK.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Wireless Sensor Network</h3>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="image.png" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>DATA MINING</h3>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="Not Limited To.avif" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3> NOT LIMITED TO ..</h3>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  <!-- <div class="card">
+                      <div class="content">
+                          <div class="imgBx">
+                              <img src="DATA MINING & DATA SCIENCE.jpeg" alt="">
+                          </div>
+                          <div class="contentBx">
+                              <h3>Data Mining & Data Science</h3>
+                          </div>
+                      </div>
+                     
+                  </div> -->
+                  
+              </div>
+          </div>
+           <div class="square-box">
+          <div class="scrolling-section"> 
+                      <!-- Scrolling section content -->
+                      
+                    <div class="scrolling-content">
+                      <br><br><br><br><br><br><br><br>
+                          <h2><u>List of recent Projects</u></h2>
+                          <br><br><br><br>
+                          <p><b>Detection of Faulty Soyabean Seeds & Classification</b></p><br><br>
+                          <p><b>Cross-domain recommendation system</b></p><br><br>
+                          <p><b>Data Hiding over OFDM Based Wireless Communication System</b></p><br><br>
+                          <p><b>Face Anti-Spoofing</b></p><br><br>
+                          <p><b>Detection of Gradual Transition of Videos</b></p><br><br>
+                          <p><b>Optimisation of Routing Protocol in WSN</b></p><br><br>
+                          <p><b>Inpainting of Neural Images</b></p><br><br>
+                          <p><b>Health care Management Framework Using Artificial Intelligence and Blockchain</b></p><br><br>
+                          <p><b>Image Denoising using Autostack Encoder - Decoder Network</b></p><br><br>
+                          <p><b>Face Recognition under Occlusion</b></p><br><br>
+                          <p><b>Mitigating Black Hole Attacks in WSN</b></p><br><br>
+                          <p><b>Detection of Spliced Images</b> </p><br><br>
+                          <p><b>Object Detection and Localisation using MASK-RCNN</b></p><br><br>
+                          <p><b>Classification of Indoor & Outdoor Images using Deep Networks</b></p><br><br>
+                          <p><b>Classification of Dental Diseases</b></p><br><br>
+                          <p><b>Optimisation of WSN Routing Scheme using Artificial Intelligence</b></p><br><br>
+                          <p><b>Classification of KL Grades for Knee Osteoarthritis</b></p><br><br>
+                          <p><b>Channel Estimation of OFDM Based Wireless communication SYstem.</b></p><br><br>
+                          <p><b>Scene Classification for Self-Driven Cars using Deep CNN</b></p><br><br>
+                          <p><b>Diagnosis of Alzheimer's Disease</b></p><br><br>
+                          <p><b>Intra and Inter mode Decision in H.264/AVC</b></p><br><br>
+                          <p><b>Blind Synthetic Image Quality Assesment using Deep Networks</b></p><br>
+                          <!-- Add more content here as needed -->
+                      </div>
+                  </div>
+              </div>
+      </section>
+   <br><br><br>
+  
+        
+      <div class="Home" id = "Pearl">
+          <div class="homeim">
+              <img src="Landing.png" alt="">
+              <div class="intro">
+                  <p class="tagline1">The Pearl Engineering Solutions</p>
+                  <br><br><br><br>
+                  <p style="font-size:2vw;" class="tagline2" >Deals in Software Development for B.E,M.Tech.,VHDL and Ph.D. Research&nbsp;</p>
+                   <p style="font-size:2vw;" class="tagline2">Coding & Simulation with MATLAB , Python & NS-2</p>
+              </div>
+          </div>
+      </div>
+    <!-- =============================== -->
+    <!-- Services Available -->
+     <div class="Vision" id="Vision" >
+          <h1>Services Available</h1>
+          <div class="line1"></div>
+      </div>
+      <div class="visioncont" id="visioncont" >
+          <div class="visbox">
+              <img src="apple-touch-icon1.png" alt="" />
+              <div class="visvis">
+                  <pre>Project Development:</pre>
+                  <p id="emp">
+                      "Embark on a Journey of Innovation and Success with Pearl Engineering Solutions: Your Partner in Exceptional Project Development!" 
+                  </p>
+              </div>
+          </div>
+  
+          <div class="visbox">
+              <img class="ic2" src="apple-touch-icon.png" alt="" />
+              <div class="visvis">
+                  <pre>Technical Paper Writing: </pre>
+                  <p id="emp">
+                     " At Pearl Engineering Solutions, we understand the profound impact of well-crafted papers in shaping careers, academic trajectories, and business success. "
+                  </p>
+              </div>
+          </div>
+  
+  
+          <div class="visbox">
+              <img id="ic3" src="apple-touch-icon3.png" alt="" />
+              <div class="visvis">
+                  <pre>Thesis Writing :</pre>
+                  <p id="emp">
+                      "Unveil the Power of Persuasion and Precision with Pearl Engineering Solutions: Your Premier Destination for Exceptional Thesis Writing! "
+                  </p>
+              </div>
+          </div>
+         <!--  <div class="visbox">
+              <img class="ic2" src="apple-touch-icon.png" alt="" />
+              <div class="visvis">
+                  <pre>Plagiarism below 10% (Turnitin)</pre>
+                  <p id="emp">
+                      "Unlocking Originality: Pearl Engineering Solutions Ensures Plagiarism Below 10% (Turnitin) for Unparalleled Academic Integrity!
+                  </p>
+              </div>
+          </div> -->
+      </div>
+        <br>
+        <div class="card-header text-center" style="background-color: #2596be ; color: white;width: 100vw;height: 4vw;text-align: center;" id="contact form">
+          <h1 style="font-size: 3vw; font-family: sans-serif;">Contact Form</h1>
+      </div>
+        <div style="padding-left: 30%; padding-right:30%;padding-top:0vw; background-color: #abdbe3;" >
+                     
+      <form action="/sendemail" method="POST" enctype="multipart/form-data" autocomplete="off" >
+
+        <br><br>
+        <div class="form-group row">
+            <h4 style="color: black;">Full Name :</h4>
+            <input type="text" name="name" required placeholder="Enter full name :" class="form-control">
+        </div>
+
+        <div class="form-group row">
+            <h4 style="color: black">Mobile No :</h4>
+            <input type="text" name="phone" required placeholder="Enter mobile No :" class="form-control">
+        </div>
+
+        <div class="form-group row">
+            <h4 style="color: black">Email id :</h4>
+            <input type="email" name="to" required placeholder="To :" class="form-control" style=" width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;">
+        </div>
+
+        <div class="form-group row">
+            <h4 style="color: black">Residential Address :</h4>
+            <input type="text" name="address" required placeholder="Enter Residential address :" class="form-control">
+        </div>
+
+
+        <div class="form-group row">
+            <h4 style="color: black">Qualification :</h4>
+            <input type="text" name="qualification" required placeholder=" Enter Your Qualification :" class="form-control">
+        </div>
+        
+        <div class="form-group row">
+            <h4 style="color: black">Aim of Project :</h4>
+            <textarea class="form-control" name="aim" cols="30" rows="4" required placeholder="Message : " style=" width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;"></textarea>
+        </div>
+
+        <div class="form-group row">
+            <h4 style="color: black">Platform :</h4>
+            <select name="platform" title="Platform">
+                <option value="Matlab"> Matlab</option>
+                <option value="Python"> Python</option>
+                <option value="MS2"> MS2</option>
+            </select>
+        </div>
+
+       <div class="form-group row">
+        <label for="attachments" style="color: black; font-size: 20px;"><b>Upload Your Base Paper :</b></label>
+        <input type="file" name="image" required placeholder="Message :" aria-required="true"  class="form-control" style=" width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;">
+       </div>
+
+       <div class="form-group row">
+        <button style="border: none; background-color: #ffbc13; color:white; width:100%;margin-top: 10px; border-radius: 5px; height: 50px;">
+           <b> Send Message</b>
+        </button>
+       </div>
+      </form>
+      </div>
+      </div>
+    </div>
+    </div>
+    <!-- ======================================================== -->
+    <br><br><br>
+
+    <div style="background-color: white; width: 100%; height: 410px;" id="about">  
+  
+      <div style="background-color: #2596be; width: 50%; height: 400px;
+      float:left;"> 
+      <div align="center" style="color: white;font-size:
+      17px; font-weight: bold; padding-left:25%"> 
+      <p style="text-align: left;font-size: 25px; padding-top:5%; padding-left: 20%;"> CLIENTS FROM</p> 
+      <br>
+      <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IIT's</p> 
+       <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NIT's</p>
+      <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IIIT's</p>
+       <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Government Universities</p>
+        <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deemed Universities</p>
+       <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autonomous Institutes</p>
+        <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private Universities</p> 
+        <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Government Institutes</p>
+        <p style="text-align: left;"> ➢ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Un-Aided Institutes</p>
+        </div>
+      </div>  
+
+      <div style="background-color: white; width:50%; height: 400 px; float:left;">  
+              <img src="Various Clients.jpg" style="object-fit:cover;
+          object-position: left;
+          width:100%;
+          height:400px;
+          border: solid 1px #CCC">  
+      </div>  
+  </div>  
+  <!-- =================================================== -->
+
+  <div style="background-color: white; width: 100%; height: 410px;">  
+
+       <div style="background-color: white; width:50%; height: 400px; float:left;">  
+              <img src="Achievements.jpg" style="object-fit:cover;
+          object-position: left;
+          width:100%;
+          height:400px;
+          border: solid 1px #CCC">  
+      </div> 
+
+     <div style="background-color: white; width: 50%; height: 400px; float:left;"> 
+      <div align="left" style="color: #2596be;font-size: 18px; font-weight: bold;padding-left: 10%; padding-top: 5%;"> 
+      <p style="text-align: left;font-size: 25px; padding-left: 20%;">ACHIEVEMENTS</p><br>
+      <p> ✓ More than 600+ Projects</p>  
+      <br>
+      <p> ✓ Publications in SCI / Web of Science / Scopus / UGC approved journals</p>
+      <br>
+      <p> ✓ Publications in springer / IEEE Conferences & Book chapters</p>
+      <br>
+      <p> ✓ Plagiarism using TURNITIN for thesis & papers below 10%</p>
+  </div>
+  </div>  
+</div>
+ 
+
+  <!-- ========================================== -->
+
+
+    <!-- =========================================================--> 
+
+    
+    <div class="footer" id="foot">
+      <div class="main-content2">
+          <div class="left box2">
+                  <h3>About us</h3>
+                  <div class="line5"></div>
+                  <div class="content2">
+                      <div class="img6">
+                          <img src="LogoFinal.png">
+                      </div>
+                      <p>
+Pearl Engineering Solutions is a leading provider of engineering services renowned for its commitment to excellence and integrity. Specializing in project development, technical paper writing, and thesis writing, Pearl Engineering Solutions ensures that all deliverables are of the highest quality while maintaining a plagiarism level below 10%, as verified by Turnitin, a widely recognized plagiarism detection tool.</p>
+                     </div>
+             </div>
+  
+             <div class="center box2">
+              <h3>Contact Us</h3>
+              <div class="line5"></div>
+              <div class="content2">
+                  <div class="place">
+                      <!-- <span class="fa fa-map-marker-alt"></span> -->
+                      <div class="text" style="text-align: left;"><b><u>Address :</u></b>C- 14 , Care of Rajiv B Deshmukh , Shrinath Sai Nagar ,Omkar Nagar , Near Water Tank , Manewada Besa road Nagpur - 27</div>
+                  </div>
+                  
+                  <div class="email">
+                      <!-- <span class="fa fa-envelope"></span> -->
+                      <span class="text"><b><u>Email Id:</u></b>  tpes.data@gmail.com</span>
+                  </div>
+                  <div class="email">
+                      <!-- <span class="fa fa-envelope"></span> -->
+                      <span class="text"><b><u>Telephone :</u></b> 7722005598</span>
+                  </div>
+                  <!-- <div class="phone">
+                      <span class="fa fa-phone-alt"></span> 
+                       <span class="text">Telephone : 7722005598</span>
+                  </div> -->
+              </div>
+             </div>
+  
+             <div class="right box2">
+                  <h3>The Pearl Engineering Solutions</h3>
+                      <div class="line5"></div>
+                      <div class="content2" style="color: yellow;">
+                          <li><a href="#ing" style="color: white;">Domains Available</a></li>
+                          <li><a href="#Pearl" style="color: white;">Pearl Engineering</a></li>
+                          <li><a href="http://localhost:5000" style="color: white;">Contact</a></li>
+                          <li><a href="#Vision" style="color: white;">Available Services</a></li>
+                          <li><a href="#foot" style="color: white;">About Us</a></li>                
+                      </div>
+          </div>
+  
+                   
+      </div>
+      <div class="bottom2">
+          <center>
+              <span class="credit">Created By <a href="#">The Pearl Engineering Solutions</a> | </span>
+              <span class="far fa-copyright"></span><span> 2024 All rights reserved.</span>
+          </center>
+      </div>
+   </div>
+
+    </body>
+</html>
