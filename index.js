@@ -51,6 +51,9 @@ app.get('/',(req,res)=>{
     res.sendFile('/index.html')
 })
 
+app.get('/ded',(req,res)=>{
+    res.send("hii")
+})
 app.post('/sendemail',(req,res)=>{
     upload(req,res,function(err){
         if(err){
