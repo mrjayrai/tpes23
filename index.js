@@ -50,85 +50,82 @@ app.use(express.static('public'))
 app.get('/',(req,res)=>{
     res.sendFile('/index.html')
 })
-app.post('/ded',(req,res)=>{
-    res.send("hi");
-}
 
-         app.post('/sendemail', (req, res) => {
-    upload(req, res, function (err) {
-        if (err) {
-            console.error(err);
-            return res.status(500).send("Something went wrong");
-        } else {
-            const to = req.body.to;
-            const name = req.body.name;
-            const phone = req.body.phone;
-            const address = req.body.address;
-            const qualification = req.body.qualification;
-            const aim = req.body.aim;
-            const platform = req.body.platform;
-            const path = req.file.path;
+app.post('/sendemail',(req,res)=>{
+    upload(req,res,function(err){
+        if(err){
+            console.log(err)
+            return res.end("Something Went wrong")
+        }
+        else{
+            to= req.body.to
+            // subject=req.body.subject
+            body=req.body.body
 
-            console.log(to);
-            console.log(name);
-            console.log(phone);
-            console.log(address);
-            console.log(qualification);
-            console.log(aim);
-            console.log(platform);
-            console.log(path);
+            path=req.file.path
 
-            const data = `
-                Name: ${name}
-                Phone: ${phone}
-                Email: ${to}
-                Address: ${address}
-                Qualification: ${qualification}
-                Aim: ${aim}
-                Platform: ${platform}
-            `;
+            name=req.body.name
+            phone=req.body.phone
+            address=req.body.address
+            qualification=req.body.qualification
+            aim=req.body.aim
+            platform=req.body.platform
+
+            console.log(to)
+            console.log(name)
+            console.log(phone)
+            console.log(address)
+            console.log(qualification)
+            console.log(aim)
+            console.log(platform)
+            console.log(path)
+
+            var data="\nname="+ name +"\nPhone: "+ phone + "\nEmail :" + to + "\nAddress  :" + address + " \nQualification : " + qualification + "\n Aim  : " + aim + "\nPlatform : "+ platform
+             
 
             let transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: 'tpes.data@gmail.com', // Replace this with your Email Id.
-                    pass: 'yourpassword' // Replace this with your Password.
+                user: 'tpes.data@gmail.com', // Replace this with your Email Id.
+                pass: 'druo hgne aeej abqn' // Replace this with your Password.
                 }
-            });
+            })
 
             let mailOptions = {
                 from: 'tpes.data@gmail.com', // Replace this with your Email Id.
                 to: 'tpes.data@gmail.com', // Replace this with Recipient Email Id.
                 subject: "Response from Website contact Form",
                 text: data,
-                attachments: [
+                attachments:[
                     {
-                        path: path
+                        path:path
                     }
                 ]
-            };
 
-            transporter.sendMail(mailOptions, function (error, info) {
-                if (error) {
-                    console.error('Error occurred: ' + error);
-                    res.status(500).send('Error occurred, please try again later.');
-                } else {
-                    console.log('Successfully Email Sent To: ' + mailOptions.to);
-                    fs.unlink(path, function (err) {
-                        if (err) {
-                            console.error(err);
-                            return res.status(500).send(err);
-                        } else {
-                            console.log('File deleted');
-                            return res.redirect('/result.html');
-                        }
-                    });
+            }    
+
+            
+            transporter.sendMail(mailOptions, function(error, info){ 
+                if(error){
+                    console.log('Error Occured' + error)
                 }
-            });
+                else {
+                    console.log('Successfully Email Sent To:' + mailOptions.to)
+                    fs.unlink(path,function(err){
+                    if(err){
+                        return res.end(err)
+                    }
+                    else{
+                        console.log('Deleted')
+                        return res.redirect('/result.html')
+                    }
+                })
+            }
+        })
         }
-    });
-});
-         
+    })
+})
+
 app.listen(5000,() =>{
     console.log("app started on Port 5000")
 })
