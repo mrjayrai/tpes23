@@ -52,6 +52,7 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/sendemail',(req,res)=>{
+    return res.send("hi")
     upload(req,res,function(err){
         if(err){
             console.log(err)
