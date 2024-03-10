@@ -356,6 +356,19 @@ body::-webkit-scrollbar{
   margin-bottom: 5px;
   margin-left: 5%;
 }
+#ing2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  /* font-family: "Montserrat",sans-serif; */
+  font-family: "Secular One", sans-serif;
+  word-wrap: none;
+  line-height: 1.5;
+  margin: 0 0 12px; 
+  margin-top: 3vw;
+  margin-bottom: -10px;
+  padding-left: 50%;
+}
 
 .Vision {
   display: flex;
@@ -385,7 +398,7 @@ body::-webkit-scrollbar{
 }
 
 .visbox {
-  height: 200px;
+  height: 250px;
   display: flex;
   position: relative;
   padding: 20px;
@@ -679,6 +692,7 @@ body::-webkit-scrollbar{
   text-align: 18px;
   margin: 20px 0 10px;
   line-height: 1.1em;
+  align-content: justify;
 }
 
 .container .card .content .contentBx :hover {
@@ -781,8 +795,8 @@ body::-webkit-scrollbar{
   padding-right: 10vw; /* Adjust as needed to accommodate the scrolling section */
 }
 .scrolling-section {
-  position: absolute;
-  top: -2%;
+  /* position: absolute; */
+  top: 4%;
   right: 0;
   width: 20%; /* Width of the scrolling section */
   height: 110%;
@@ -790,21 +804,33 @@ body::-webkit-scrollbar{
 /*  overflow: hidden;*/
   padding: 20px;
   border: 10px solid #ffbc13;
-  behavior: scroll;
+  overflow: hidden;
   
 }
  .square-box {
         width: 200px; 
         height: 200px; 
  }
+ .square-box2{
+        width: 200px;
+        top: 4%;
+        right: 0;
+        width: 70%; /* Width of the scrolling section */
+        height: 2vw;
+        background-color:#76b5c5;
+/*  overflow: hidden;*/
+        padding: 20px;
+        border: 3px solid #ffbc13;
+
+ }
 
 .scrolling-content {
-  animation: scroll 50s infinite ; /* Adjust animation duration as needed */
-  top: 0%;
+  animation:scroll 20s infinite ; ; /* Adjust animation duration as needed */
+  top: 4%;
   right: 10%;
   width: 100%; /* Width of the scrolling section */
-  height: 100%;
-  margin-top: 0%;
+  height: 50%;
+  margin-top: 20px;
   color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -814,6 +840,7 @@ body::-webkit-scrollbar{
   margin: 10px 0 50px;
   line-height: 1.1em;
   scroll-behavior: smooth;
+
 }
 
 
@@ -1384,20 +1411,17 @@ input[type=submit]:hover {
            
         </nav>
         <br><br><br><br><br><br>
-        <!-- <section>
-          <div style="border: 3px solid #009688;">
-          <h2 >The Pearl Engineering Solutions</h2>
-          <p>Pearl Engineering Solutions is a leading provider of engineering services renowned for its commitment to
-             excellence and integrity. Specializing in project development, technical paper writing, and thesis writing,
-              Pearl Engineering Solutions ensures that all deliverables are of the highest quality while maintaining a
-               plagiarism level below 10%, as verified by Turnitin, a widely recognized plagiarism detection tool</p>
-          </div>
-        </section> -->
+        
 
         <section class="teamsp">
           <div class="teams">
-              <div class="Secondpg">
+              <div class="Secondpg" style=" background-attachment: fixed;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;">
                   <p id="ing">Domains Available</p>
+                  <p id="ing2" >List of Recent Projects</p>
+
               </div>
               <div class="container">
                   <div class="card">
@@ -1479,7 +1503,7 @@ input[type=submit]:hover {
                               <img src="WIRELESS SENSOR NETWORK.jpeg" alt="">
                           </div>
                           <div class="contentBx">
-                              <h3>Wireless Sensor Network</h3>
+                              <h3>Wireless Sensor Networks</h3>
                           </div>
                       </div>
                      
@@ -1547,10 +1571,10 @@ input[type=submit]:hover {
                   <div class="card">
                     <div class="content">
                         <div class="imgBx">
-                            <img src="Others.jpg" alt="">
+                            <img src="EmbededSystem.jpg" alt="">
                         </div>
                         <div class="contentBx">
-                            <h3>Others</h3>
+                            <h3>Embedded Systems</h3>
                         </div>
                     </div>
                     
@@ -1558,10 +1582,10 @@ input[type=submit]:hover {
                   <div class="card">
                       <div class="content">
                           <div class="imgBx">
-                              <img src="image.png" alt="">
+                              <img src="SoftComputing.jpg" alt="">
                           </div>
                           <div class="contentBx">
-                              <h3> NOT LIMITED TO ..</h3>
+                              <h3> Soft Computing</h3>
                           </div>
                       </div>
                      
@@ -1580,42 +1604,43 @@ input[type=submit]:hover {
                   
               </div>
           </div>
-           <div class="square-box">
-          <div class="scrolling-section"> 
-                      <!-- Scrolling section content -->
-                      
-                    <div class="scrolling-content">
-                      <br><br><br><br><br><br><br><br>
-                          <h2>List of recent Projects</h2>
-                          <br><br><br><br>
-                          <p><b>Detection of Faulty Soyabean Seeds & Classification</b></p><br><br>
-                          <p><b>Cross-domain recommendation system</b></p><br><br>
-                          <p><b>Data Hiding over OFDM Based Wireless Communication System</b></p><br><br>
-                          <p><b>Face Anti-Spoofing</b></p><br><br>
-                          <p><b>Detection of Gradual Transition of Videos</b></p><br><br>
-                          <p><b>Optimisation of Routing Protocol in WSN</b></p><br><br>
-                          <p><b>Inpainting of Neural Images</b></p><br><br>
-                          <p><b>Health care Management Framework Using Artificial Intelligence and Blockchain</b></p><br><br>
-                          <p><b>Image Denoising using Autostack Encoder - Decoder Network</b></p><br><br>
-                          <p><b>Face Recognition under Occlusion</b></p><br><br>
-                          <p><b>Mitigating Black Hole Attacks in WSN</b></p><br><br>
-                          <p><b>Detection of Spliced Images</b> </p><br><br>
-                          <p><b>Object Detection and Localisation using MASK-RCNN</b></p><br><br>
-                          <p><b>Classification of Indoor & Outdoor Images using Deep Networks</b></p><br><br>
-                          <p><b>Classification of Dental Diseases</b></p><br><br>
-                          <p><b>Optimisation of WSN Routing Scheme using Artificial Intelligence</b></p><br><br>
-                          <p><b>Classification of KL Grades for Knee Osteoarthritis</b></p><br><br>
-                          <p><b>Channel Estimation of OFDM Based Wireless communication SYstem.</b></p><br><br>
-                          <p><b>Scene Classification for Self-Driven Cars using Deep CNN</b></p><br><br>
-                          <p><b>Diagnosis of Alzheimer's Disease</b></p><br><br>
-                          <p><b>Intra and Inter mode Decision in H.264/AVC</b></p><br><br>
-                          <p><b>Blind Synthetic Image Quality Assesment using Deep Networks</b></p><br>
-                          <!-- Add more content here as needed -->
-                      </div>
-                  </div>
-              </div>
-      </section>
+        
    <br><br><br>
+   <div class="square-box">
+    
+    <div class="scrolling-section">    
+                         
+        <div class="scrolling-content" >
+                    <br><br>
+                    <p><b>Detection of Faulty Soyabean Seeds & Classification</b></p><br><br>
+                    <p><b>Cross-domain recommendation system</b></p><br><br>
+                    <p><b>Data Hiding over OFDM Based Wireless Communication System</b></p><br><br>
+                    <p><b>Face Anti-Spoofing</b></p><br><br>
+                    <p><b>Detection of Gradual Transition of Videos</b></p><br><br>
+                    <p><b>Optimisation of Routing Protocol in WSN</b></p><br><br>
+                    <p><b>Inpainting of Ancient Mural Images</b></p><br><br>
+                    <p><b>Health Care Management Framework Using Artificial Intelligence and Blockchain</b></p><br><br>
+                    <p><b>Image Denoising using Autostack Encoder - Decoder Network</b></p><br><br>
+                    <p><b>Face Recognition under Occlusion</b></p><br><br>
+                    <p><b>Mitigating Black Hole Attacks in WSN</b></p><br><br>
+                    <p><b>Detection & Classification of Spliced Images</b> </p><br><br>
+                    <p><b>Object Detection and Localisation using MASK-RCNN</b></p><br><br>
+                    <p><b>Classification of Indoor & Outdoor Scene Images using Deep Networks</b></p><br><br>
+                    <p><b>Classification of Dental Diseases</b></p><br><br>
+                    <p><b>Optimisation of WSN Routing Scheme using Artificial Intelligence</b></p><br><br>
+                    <p><b>Classification of KL Grades for Knee Osteoarthritis</b></p><br><br>
+                    <p><b>Channel Estimation of OFDM Based Wireless Communication System.</b></p><br><br>
+                    <p><b>Scene Classification for Self-Driven Cars using Deep CNN</b></p><br><br>
+                    <p><b>Diagnosis of Alzheimer's Disease</b></p><br><br>
+                    <p><b>Intra and Inter mode Decision in H.264/AVC</b></p><br><br>
+                    <p><b>Blind Synthetic Image Quality Assessment using Deep Networks</b></p><br>
+                   
+                </div>
+              </div>
+              
+    
+        </div>
+</section>
   
         
       <div class="Home" id = "Pearl">
@@ -1623,9 +1648,10 @@ input[type=submit]:hover {
               <img src="Landing.png" alt="">
               <div class="intro">
                   <p class="tagline1">The Pearl Engineering Solutions</p>
+                  <p class="tagline1" style="font-size:25px; text-align: center;color: white;">(Established in 2007)</p>
                   <br><br><br><br>
-                  <p style="font-size:2vw;" class="tagline2" >Deals in Software Development for B.E,M.Tech.,VHDL and Ph.D. Research&nbsp;</p>
-                   <p style="font-size:2vw;" class="tagline2">Coding & Simulation with MATLAB , Python & NS-2</p>
+                  <p style="font-size:2vw;" class="tagline2" >Deals in Software Development for B.E,M.Tech. and Ph.D. Research&nbsp;</p>
+                   <p style="font-size:2vw;" class="tagline2">Coding & Simulation with MATLAB,Python,VHDL & NS-2</p>
               </div>
           </div>
       </div>
@@ -1639,7 +1665,7 @@ input[type=submit]:hover {
           <div class="visbox">
               <img src="apple-touch-icon1.png" alt="" />
               <div class="visvis">
-                  <pre>Project Development:</pre>
+                  <pre>Project Development</pre>
                   <p id="emp">
                       "Embark on a Journey of Innovation and Success with Pearl Engineering Solutions: Your Partner in Exceptional Project Development!" 
                   </p>
@@ -1649,7 +1675,7 @@ input[type=submit]:hover {
           <div class="visbox">
               <img class="ic2" src="apple-touch-icon.png" alt="" />
               <div class="visvis">
-                  <pre>Technical Paper Writing: </pre>
+                  <pre>Technical Paper Writing</pre>
                   <p id="emp">
                      " At Pearl Engineering Solutions, we understand the profound impact of well-crafted papers in shaping careers, academic trajectories, and business success. "
                   </p>
@@ -1660,12 +1686,21 @@ input[type=submit]:hover {
           <div class="visbox">
               <img id="ic3" src="apple-touch-icon3.png" alt="" />
               <div class="visvis">
-                  <pre>Thesis Writing :</pre>
+                  <pre>Thesis Writing</pre>
                   <p id="emp">
                       "Unveil the Power of Persuasion and Precision with Pearl Engineering Solutions: Your Premier Destination for Exceptional Thesis Writing! "
                   </p>
               </div>
           </div>
+          <div class="visbox">
+            <img id="ic3" src="icons8-id-card-32.png" alt="" />
+            <div class="visvis">
+                <pre>Industrial Internship</pre>
+                <p id="emp">
+                    "Unveil the Power of Persuasion and Precision with Pearl Engineering Solutions: Your Premier Destination for Exceptional Thesis Writing! "
+                </p>
+            </div>
+        </div>
          <!--  <div class="visbox">
               <img class="ic2" src="apple-touch-icon.png" alt="" />
               <div class="visvis">
@@ -1686,17 +1721,17 @@ input[type=submit]:hover {
 
         <br><br>
         <div class="form-group row">
-            <h4 style="color: black;">Full Name :</h4>
+            <h4 style="color: black; padding-right: 80%;">Full Name</h4>
             <input type="text" name="name" required placeholder="Enter full name :" class="form-control">
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black">Mobile No :</h4>
+            <h4 style="color: black;padding-right: 80%;">Mobile No</h4>
             <input type="text" name="phone" required placeholder="Enter mobile No :" class="form-control">
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black">Email id :</h4>
+            <h4 style="color: black ; padding-right: 82%;">Email id</h4>
             <input type="email" name="to" required placeholder="To :" class="form-control" style=" width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -1707,18 +1742,18 @@ input[type=submit]:hover {
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black">Residential Address :</h4>
+            <h4 style="color: black ;padding-right: 60%;">Residential Address</h4>
             <input type="text" name="address" required placeholder="Enter Residential address :" class="form-control">
         </div>
 
 
         <div class="form-group row">
-            <h4 style="color: black">Qualification :</h4>
+            <h4 style="color: black; padding-right: 75%;">Qualification</h4>
             <input type="text" name="qualification" required placeholder=" Enter Your Qualification :" class="form-control">
         </div>
         
         <div class="form-group row">
-            <h4 style="color: black">Aim of Project :</h4>
+            <h4 style="color: black; padding-right:70%;">Aim of Project</h4>
             <textarea class="form-control" name="aim" cols="30" rows="4" required placeholder="Message : " style=" width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -1729,16 +1764,17 @@ input[type=submit]:hover {
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black">Platform :</h4>
+            <h4 style="color: black; padding-right: 80%;">Platform</h4>
             <select name="platform" title="Platform">
                 <option value="Matlab"> Matlab</option>
                 <option value="Python"> Python</option>
-                <option value="MS2"> MS2</option>
+                <option value="MS2"> NS-2</option>
+                <option value="MS2"> VHDL</option>
             </select>
         </div>
 
-       <div class="form-group row">
-        <label for="attachments" style="color: black; font-size: 20px;"><b>Upload Your Base Paper :</b></label>
+       <div class="form-group row" >
+        <label for="attachments" style="color: black; font-size: 20px;width: 50%;padding-right: 55%;"><b>Upload Your Base Paper </b></label>
         <input type="file" name="image" required placeholder="Message :" aria-required="true"  class="form-control" style=" width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -1749,7 +1785,7 @@ input[type=submit]:hover {
        </div>
 
        <div class="form-group row">
-        <button style="border: none; background-color: #ffbc13; color:white; width:100%;margin-top: 10px; border-radius: 5px; height: 50px;">
+        <button style="border: none; background-color: #ffbc13; color:white; width:30%;margin-top: 10px; border-radius: 5px; height: 50px;">
            <b> Send Message</b>
         </button>
        </div>
@@ -1759,8 +1795,32 @@ input[type=submit]:hover {
     </div>
     </div>
     <!-- ======================================================== -->
-    <br><br><br>
+   
 
+    <div style="background-color: white; width: 100%; height: 401px;">  
+
+       <div style="background-color: white; width:50%; height: 400px; float:left;">  
+              <img src="Achievements.jpg" style="object-fit:cover;
+          object-position: left;
+          width:100%;
+          height:400px;
+          border: solid 1px #CCC">  
+      </div> 
+
+     <div style="background-color: white; width: 50%; height: 400px; float:left;"> 
+      <div align="left" style="color: #2596be;font-size: 20px; font-weight: bold;padding-left: 10%; padding-top: 5%;"> 
+      <p style="text-align: left;font-size: 25px; padding-left: 20%;" ></p>ACHIEVEMENTS</p><br>
+      <p> ✓ More than 600+ Projects</p>  
+      <br>
+      <p> ✓ Publications in SCI / Web of Science / Scopus / UGC approved journals</p>
+      <br>
+      <p> ✓ Publications in springer / IEEE Conferences & Book chapters</p>
+      <br>
+      <p> ✓ Plagiarism using TURNITIN for thesis & papers below 10%</p>
+  </div>
+  </div>  
+</div>
+<!-- =================================================== -->
     <div style="background-color: white; width: 100%; height: 410px;" id="about">  
   
       <div style="background-color: #2596be; width: 50%; height: 400px;
@@ -1791,29 +1851,7 @@ input[type=submit]:hover {
   </div>  
   <!-- =================================================== -->
 
-  <div style="background-color: white; width: 100%; height: 410px;">  
-
-       <div style="background-color: white; width:50%; height: 400px; float:left;">  
-              <img src="Achievements.jpg" style="object-fit:cover;
-          object-position: left;
-          width:100%;
-          height:400px;
-          border: solid 1px #CCC">  
-      </div> 
-
-     <div style="background-color: white; width: 50%; height: 400px; float:left;"> 
-      <div align="left" style="color: #2596be;font-size: 18px; font-weight: bold;padding-left: 10%; padding-top: 5%;"> 
-      <p style="text-align: left;font-size: 25px; padding-left: 20%;">ACHIEVEMENTS</p><br>
-      <p> ✓ More than 600+ Projects</p>  
-      <br>
-      <p> ✓ Publications in SCI / Web of Science / Scopus / UGC approved journals</p>
-      <br>
-      <p> ✓ Publications in springer / IEEE Conferences & Book chapters</p>
-      <br>
-      <p> ✓ Plagiarism using TURNITIN for thesis & papers below 10%</p>
-  </div>
-  </div>  
-</div>
+  
  
 
   <!-- ========================================== -->
@@ -1842,16 +1880,16 @@ Pearl Engineering Solutions is a leading provider of engineering services renown
               <div class="content2">
                   <div class="place">
                       <!-- <span class="fa fa-map-marker-alt"></span> -->
-                      <div class="text" style="text-align: left;"><b><u>Address :</u></b>&nbsp;&nbsp;C- 14 , c/o  Rajiv B Deshmukh , Shrinath Sai Nagar ,Omkar Nagar , Near Water Tank , Manewada Besa road Nagpur - 27</div>
+                      <div class="text" style="text-align: left;"><b><u>Address :</u></b>&nbsp;&nbsp;C - 14, C/o  Rajiv B. Deshmukh, Shrinath Sai Nagar, Omkar Nagar, Near Water Tank, Manewada Besa Road, Nagpur - 27</div>
                   </div>
                   
                   <div class="email">
                       <!-- <span class="fa fa-envelope"></span> -->
-                      <span class="text"><b><u>Email Id:</u></b>  tpes.data@gmail.com</span>
+                      <span class="text"><b><u>Email Id:</u></b> &nbsp;&nbsp;tpes.data@gmail.com</span>
                   </div>
                   <div class="email">
                       <!-- <span class="fa fa-envelope"></span> -->
-                      <span class="text"><b><u>Telephone :</u></b> 7722005598</span>
+                      <span class="text"><b><u>Telephone :</u></b>&nbsp;&nbsp; 7722005598 , 0712-2990073</span>
                   </div>
                   <!-- <div class="phone">
                       <span class="fa fa-phone-alt"></span> 
